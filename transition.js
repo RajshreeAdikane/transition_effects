@@ -20,8 +20,10 @@ export function getTransition({ renderer, sceneA, sceneB }) {
   const loader = new THREE.TextureLoader();
 
   for (let i = 0; i < 3; i++) {
-    textures[i] = loader.load(`./img/transition${i}.png`);
+    textures[i] = loader.load(`./public/img/transition${i}.png`);
   }
+
+  // console.log(textures)
 
   const material = new THREE.ShaderMaterial({
     uniforms: {
